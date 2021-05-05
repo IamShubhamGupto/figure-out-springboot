@@ -1,4 +1,4 @@
-package first_maven_project.topic;
+package com.example.topic;
 
 import java.util.List;
 
@@ -14,7 +14,11 @@ public class TopicController {
 
 	@Autowired
 	private TopicService topicService;
-	
+	@RequestMapping("/hi")
+	public String hi() {
+		
+		return "hi";
+	}
 	@RequestMapping("/topics")
 	public List<Topic> getAllTopics() {
 		
